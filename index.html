@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="score">
+        <h1><span id="level"></span><span id="bar"><progress id="xp" value="0" max="100"></progress></span><h1>
+      </div>
+      <div class="todo-header">
+          <h2>TO-DO LIST</h2>
+      </div>
+      <div class="todo-body">
+          <input 
+          type="text" 
+          id="todoText" 
+          class="todo-input" 
+          placeholder="Enter Your Task . . ."
+          />
+
+          <img
+          src="images/plus.png"
+          alt="+"
+          id="AddUpdateClick"
+          onclick="CreateToDoItems();"
+          />
+      </div>
+      <h5 id="Alert"></h5>
+      <ul id="list-items" class="list-items"></ul>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+      document.getElementById("level").innerHTML = level;
+      document.getElementById("xp").setAttribute("value", xp);
+    </script>
+  </body>
+</html>
